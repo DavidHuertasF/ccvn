@@ -1,0 +1,17 @@
+.footer-left{
+    position: fixed;
+    width: 30px;
+    right:0;
+    top: 0;
+    display: flex;
+    padding-top: 20vh;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(233, 232, 232);
+    height: 100vh;
+}
+
+.footer-left i{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
