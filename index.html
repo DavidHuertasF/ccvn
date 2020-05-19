@@ -6,10 +6,7 @@
   </head>
     <div class="loader-wrapper">
       <div class="loader">
-        <p class="c">C</p>
-        <p class="v">V</p>
-        <p class="n">N</p>
-        <p class="c-b">C</p>
+       <img src="img/logoblanco.png" alt="">
       </div>
     </div>
 
@@ -36,8 +33,15 @@
       </div>
 
       <section class="banner">
-        <img src="img/banner.JPG" alt="">
+        <div>
+        <div class="banner_title">
+          <p><span>
+            Transmisiones 
+          </span><br> en vivo</p></div>
+        <img id="img" src="img/banner.JPG" alt="">
+        <img class="dark-background" src="img/Elipse.png" alt="">
         <div class="ok" style="display: none;"></div>
+      </div>
       </section>
       
       <section id="menu" class="menu">
@@ -46,8 +50,8 @@
           <div class="menu__buttons">
             <button>Próximos</button>
             <button>Repeticiones</button>
-            <button>Tipo</button>
-            <button>Categoría</button>
+            <button>Tipo <img src="img/down.svg" alt=""> </button>
+            <button>Categoría <img src="img/down.svg" alt=""></button>
           </div>
         </div>
         <div class="menu__content" >
@@ -164,12 +168,28 @@
     
   </body>
 
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/f20fc5b334.js" crossorigin="anonymous"></script>
   <script>
 
-    $(window).on("load", function () {
 
+$( window ).resize(function() {
+  $('.dark-background').height( $('#img').height())  ;
+  $('.banner_title').height( $('#img').height())  ;
+
+  $('.dark-background').width( $('#img').width())  ;
+});
+
+    $(window).on("load", function () {
+      $('.dark-background').height( $('#img').height())  ;
+      $('.banner_title').height( $('#img').height())  ;
+
+      $('.dark-background').width( $('#img').width())  ;
 
     setTimeout(
      function() 
@@ -212,4 +232,5 @@
       }
     });
   </script>
+ 
 </html>

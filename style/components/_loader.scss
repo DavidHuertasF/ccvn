@@ -11,37 +11,5 @@
   align-items: center;
 }
 
-.loader {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 100px;
-  display: grid;
-  grid-template: 40px 250px/60px 50px;
-}
 
-.loader .c {
-  margin-top: 100px;
-  margin-left: -12px;
-  animation: c 4s infinite ease;
-}
 
-.loader .n {
-  animation: c 3.7s infinite ease;
-}
-
-.loader .v {
-  animation: c 3.4s infinite ease;
-}
-
-.loader .c-b {
-  animation: c 3.1s infinite ease;
-}
-
-@keyframes c {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}

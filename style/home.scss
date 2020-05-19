@@ -6,7 +6,7 @@
 
 .container{
  margin: 30px 30px 30px 30px;
- padding: 0.2%  5% 5% 5%;
+ padding: 0.2vw  5vw 5vw 5vw;
  background:white;
 }
 
@@ -48,10 +48,41 @@ a{
   justify-content: center;
 }
 
-.banner img{
+.banner #img{
   width: 100%;
   max-height: 70vh;
     align-self: center;
+}
+
+.banner_title{
+  position: absolute;
+  z-index: 3;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+  color: white;
+  font-size: 2.5vw;
+  right: 8vw;
+  margin-top: -1vh;
+  background-repeat: round;
+
+  p{
+    text-align: center;
+    span{
+      font-weight: bold;
+    }
+  }
+}
+
+
+.dark-background{
+  width: 100%;
+  max-height: 70vh;
+  align-self: center;
+  position: absolute;
+  right: 7.5vw;
 }
 
 .ok {
@@ -76,23 +107,25 @@ a{
   width: 70%;
   justify-content: space-evenly;
   button{
+    display: flex;
     height: 40px;
+    align-items: center;
     background-color: #ebe8e8;
     color: rgb(110, 110, 110);
     border: none;
     padding: 0 3.2vw 0 3.2vw;
     border-radius: 15px;
+
+    img{
+      width: 1.2vw;
+      margin-left: 1vw;
+    }
   }
 
   button:hover{
-    height: 42px;
     background-color: #5743be;
-    box-shadow: 2px 5px #88888859;
     cursor: pointer;
     color: white;
-    border: none;
-    padding: 0 3.2vw 0 3.2vw;
-    border-radius: 15px;
   }
 }
 
@@ -107,8 +140,7 @@ a{
   display: grid;
   height: 70%;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0);
-  transition: 1s;
+  transition: 0.6s;
   grid-column-gap:1vw;
   // background-color: rgb(228, 228, 228);
   grid-template: 25% 60% 15%/ 15% 80%;
@@ -132,7 +164,7 @@ a{
     }
     .numero-dia{
       font-size: 2.8vw;
-      font-weight: bold;
+      font-weight: 800;
       margin-top: 1px;
       text-align: center;
     }
@@ -169,9 +201,7 @@ a{
 }
 
 .event:hover{
-  background: rgb(245, 245, 245);
   cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .subtitle{
@@ -184,8 +214,7 @@ a{
   .events{
     border: 1px solid rgb(199, 199, 199);
     width: 88%;
-    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 0.6vw 5vw;
   }
 
@@ -201,6 +230,7 @@ a{
   }
   
 }
+
 
 
 
