@@ -39,6 +39,7 @@
           </span><br> en vivo</p></div>
           <img class="dark-background" src="img/Elipse.png" alt="">
         <img id="img" src="img/banner.JPG" alt="">
+        <img class="phone" src="img/banner-phone.png" alt="">
        
         <div class="ok" style="display: none;"></div>
       </section>
@@ -47,10 +48,26 @@
         <div class="menu__options">
           <p class="subtitle">Eventos y clases</p>
           <div class="menu__buttons">
-            <button>Próximos</button>
-            <button>Repeticiones</button>
-            <button>Tipo <img src="img/down.svg" alt=""> </button>
-            <button>Categoría <img src="img/down.svg" alt=""></button>
+            <button class="selected-button">Próximos</button>
+            <button class="selected-button">Repeticiones</button>
+            <div>
+              <button onclick="typesFunction()">Tipo <img src="img/down.svg" alt=""> </button>
+              <div class="types">
+                <button  class=" selected-button sub_button">Repeticiones</button>
+                <button class=" selected-button sub_button">Repeticiones</button>
+                <button class=" selected-button sub_button">Repeticiones</button>
+              </div>
+            </div>
+            
+            <div>
+              <button  onclick="categoriesFunction()">Categoría <img src="img/down.svg" alt=""></button>
+
+              <div class="categories">
+                <button class="selected-button sub_button">Categoria</button>
+                <button class="selected-button sub_button">Categoria</button>
+                <button class="selected-button sub_button">Categoria</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="menu__content" >
@@ -233,10 +250,41 @@ $( window ).resize(function() {
 
         $('.dark-background').width( $('#img').width())  ;
       $('.dark-background').height( $('#img').height())  ;
-
+      $('.loader').hide();
       $('.banner_title').height( $('#img').height())  ;
       }
     });
   </script>
+
+
+<script>
+
+
+    $(".types").hide();
+    $(".categories").hide();
+
+  function typesFunction(){
+    if($('.types').css("display") == 'none'){
+      $(".types").show();
+    }else{
+      $(".types").hide();
+    }
+  }
+
+  function categoriesFunction(){
+    if($('.categories').css("display") == 'none'){
+      $(".categories").show();
+    }else{
+      $(".categories").hide();
+    }
+  }
+
+
+
+  $('.selected-button').click(function(){
+        $('.active').removeClass('active')
+        $(this).addClass('active'); 
+  });
+</script>
  
 </html>

@@ -4,57 +4,66 @@
 @import "components/loader";
 @import "components/footer-left";
 
-.container{
- margin: 30px 30px 30px 30px;
- padding: 0.2vw  5vw 5vw 5vw;
- background:white;
+.container {
+  margin: 30px 30px 30px 30px;
+  padding: 0.2vw 5vw 5vw 5vw;
+  background: white;
 }
 
+.types{
+  position: absolute;
+  margin-left: -25px;
+}
 
-a{
+.categories{
+  position: absolute;
+  margin-left: 25px;
+}
+
+a {
   text-decoration: none;
 }
-.header{
-  margin-top: 15px ;
+.header {
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  img{
+  img {
     width: 15vw;
     margin-bottom: -15px;
   }
 
-  .header__down{
+  .header__down {
     display: flex;
-    p{
+    p {
       color: #424242;
-      text-decoration:none;
+      text-decoration: none;
       cursor: pointer;
       font-size: 1.5vw;
     }
-    p:hover{
+    p:hover {
       font-weight: bolder;
     }
-    .p1{
+    .p1 {
       margin-right: 50px;
       margin-left: -10px;
     }
   }
 }
 
-.banner{
+.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.banner #img{
+.banner #img {
   width: 100%;
   max-height: 70vh;
-    align-self: center;
+  align-self: center;
 }
 
-.banner_title{
+.banner_title {
   position: absolute;
   z-index: 3;
   width: 30%;
@@ -68,16 +77,15 @@ a{
   margin-top: -1vh;
   background-repeat: round;
 
-  p{
+  p {
     text-align: center;
-    span{
+    span {
       font-weight: bold;
     }
   }
 }
 
-
-.dark-background{
+.dark-background {
   width: 100%;
   max-height: 70vh !important;
   align-self: center;
@@ -91,24 +99,30 @@ a{
   background-color: #00c6f7;
   align-self: center;
 }
-.menu{
+.menu {
   margin-top: 8vh;
 }
 
-.menu__options{
+.menu__options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.menu__buttons{
+
+.sub_button{
+  border-radius: inherit !important;
+  width: 95% !important;
+  height: 30px !important;
+}
+.menu__buttons {
   display: flex;
   width: 70%;
   justify-content: space-evenly;
-  button{
+  button {
     display: flex;
     height: 40px;
+    transition: 0.3s;
     align-items: center;
     background-color: #ebe8e8;
     color: rgb(110, 110, 110);
@@ -116,133 +130,204 @@ a{
     padding: 0 3.2vw 0 3.2vw;
     border-radius: 15px;
 
-    img{
+    img {
       width: 1.2vw;
       margin-left: 1vw;
     }
   }
 
-  button:hover{
+  button:hover {
     background-color: #5743be;
     cursor: pointer;
     color: white;
+
+    img {
+      filter:brightness(300%);
+    }
   }
 }
 
-
-.menu__content{
-  display: grid;
-  grid-column-gap: 5vw;
-  grid-template-columns: 1fr 1fr ;
+.active{
+  background-color: #5743be !important;
+  color: white !important;
 }
 
-.event{
+.menu__content {
+  display: grid;
+  grid-column-gap: 5vw;
+  grid-template-columns: 1fr 1fr;
+}
+
+.event {
   display: grid;
   height: 70%;
   border-radius: 20px;
   transition: 0.6s;
-  grid-column-gap:1vw;
+  grid-column-gap: 1vw;
   // background-color: rgb(228, 228, 228);
   grid-template: 25% 60% 15%/ 15% 80%;
   padding: 20px;
-  grid-template-areas: "fecha up "
-                       " . content"
-                       " . hour";
+  grid-template-areas:
+    "fecha up "
+    " . content"
+    " . hour";
 
-  .fecha{
+  .fecha {
     grid-area: fecha;
     border-right: solid 1px rgb(173, 173, 173);
     height: 90%;
-    p{
+    p {
       margin: 5px 0 0 0;
     }
-    .dia{
+    .dia {
       font-size: 1.3vw;
       text-align: center;
       color: rgb(131, 131, 131);
-
     }
-    .numero-dia{
+    .numero-dia {
       font-size: 2.8vw;
       font-weight: 800;
       margin-top: 1px;
       text-align: center;
     }
-  } 
-  .up{
+  }
+  .up {
     grid-area: up;
     margin-left: 5px;
-    p{
+    p {
       margin: 5px 0 0 0;
     }
-  } 
-  .content{
-    grid-area:content;
+  }
+  .content {
+    grid-area: content;
     font-size: 1.2vw;
     margin-top: 3vh;
-  } 
-  .hour{
+  }
+  .hour {
     grid-area: hour;
     font-size: 1.3vw;
-    color: blue;
+    color: #1956b1;
     font-weight: bold;
-  } 
-  
-  .name{
+  }
+
+  .name {
     font-size: 2vw;
     margin-bottom: 0;
   }
 
-  .category{
+  .category {
     font-size: 1.5vw;
     font-size: 1.8 vw;
     color: rgb(131, 131, 131);
-  }         
+  }
 }
 
-.event:hover{
+.event:hover {
   cursor: pointer;
+  background-color: #f6f7f9;
 }
 
-.subtitle{
+.subtitle {
   font-size: 2.5vw;
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.recomendados{
-  
-  .events{
+.recomendados {
+  .events {
     border: 1px solid rgb(199, 199, 199);
     width: 88%;
     border-radius: 15px;
     padding: 0.6vw 5vw;
   }
 
-  .menu__content{
+  .menu__content {
     grid-column-gap: 0vw;
-    .content{
+    .content {
       margin-top: 5vh;
     }
   }
-  .fa-star{
+  .fa-star {
     font-size: 3vw !important;
-    color:  #5743be !important;
+    color: #ffd700 !important;
   }
-  
+}
+
+.phone{
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+
+  .phone{
+    display: block;
+    width: 100vw;
+    height: 40vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .banner_title p {
+    text-align: inherit;
+    position: absolute;
+    top: -10vh;
+    font-size: 6vw;
+    right: 42vw;
+    background: #00000052;
+    padding: 29px;
 }
 
 
 
-@media screen  and  (orientation: portrait) {
-
-  .menu__content{
-    // display: grid;
-    // grid-column-gap: 5vw;
-    grid-template-columns:  1fr ;
+  .ok{
+    position: absolute;
+    width: 100vw;
+    top: 40vh;
   }
 
+  .container {
+    margin: 40vh 30px 30px 30px;
 }
 
+  #img{
+    display: none;
+  }
+
+  .menu__content {
+    grid-template-columns: 1fr;
+  }
+
+  .event .category {
+    font-size: 2.5vw;
+  }
+
+  .event .content {
+    margin-top: 3vh !important;
+    font-size: 2vw;
+  }
+
+  .event .hour {
+    font-size: 2.5vw;
+  }
+
+  .event .name {
+    font-size: 3.5vw;
+  }
+
+  .recomendados .fa-star, .event .fecha .numero-dia {
+    font-size: 5vw !important;
+  }
+
+  .footer-left i, .header, .dark-background {
+    display: none;
+  }
+
+  .event .fecha .dia {
+    font-size: 2.5vw;
+  }
 
 
-
+  .banner_title {
+    width: 0;
+  }
+}
