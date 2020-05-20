@@ -79,10 +79,10 @@ a{
 
 .dark-background{
   width: 100%;
-  max-height: 70vh;
+  max-height: 70vh !important;
   align-self: center;
+  margin-top: -5px;
   position: absolute;
-  right: 7.5vw;
 }
 
 .ok {
@@ -231,6 +231,17 @@ a{
   
 }
 
+
+
+@media screen  and  (orientation: portrait) {
+
+  .menu__content{
+    // display: grid;
+    // grid-column-gap: 5vw;
+    grid-template-columns:  1fr ;
+  }
+
+}
 
 
 
