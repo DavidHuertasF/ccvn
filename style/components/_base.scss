@@ -6,6 +6,10 @@ body{
     background: #f8f8f8;
 }
 
+.phone{
+    display: none;
+  }
+
 html, body{
     overflow: hidden;
     height: 100%;
@@ -13,4 +17,25 @@ html, body{
 
 button{
     outline:none;
+}
+
+.sticky {
+    // display: block !important;
+    position: fixed;
+    top: -3vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+    
+    left: 4%;
+    width: 92%;
+    
+    background: white;
+    z-index: 10;
+    .logo{
+        width: calc(15vh + 5vw) !important;
+    }
+    .header__down  {
+        display: none;
+    }
+
 }
